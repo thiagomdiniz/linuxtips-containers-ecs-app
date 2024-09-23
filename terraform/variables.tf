@@ -73,6 +73,8 @@ variable "ssm_private_subnet_3" {
   description = "ID da terceira subnet privada, armazenado no AWS SSM, usada para implantação do serviço."
 }
 
+variable "ssm_alb" {}
+
 variable "environment_variables" {
   type        = list(map(string))
   description = "Lista de variáveis de ambiente que serão passadas às tarefas do serviço."
@@ -122,3 +124,7 @@ variable "scale_in_cooldown" {}
 # Tracking CPU
 
 variable "scale_tracking_cpu" {}
+
+# Tracking Requests
+
+variable "scale_tracking_requests" {}
