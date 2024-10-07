@@ -20,7 +20,8 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.68.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.69.0 |
+| <a name="provider_null"></a> [null](#provider\_null) | 3.2.3 |
 
 ## Modules
 
@@ -34,6 +35,7 @@ No requirements.
 |------|------|
 | [aws_iam_role.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.ecs_task_execution_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [null_resource.ecr_image_push](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [aws_ssm_parameter.alb](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.listener](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.private_subnet_1](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
@@ -69,7 +71,7 @@ No requirements.
 | <a name="input_service_cpu"></a> [service\_cpu](#input\_service\_cpu) | Quantidade de CPU reservada para o serviço, em unidades definidas pela AWS. | `number` | n/a | yes |
 | <a name="input_service_healthcheck"></a> [service\_healthcheck](#input\_service\_healthcheck) | Configurações do health check para o serviço, como caminho e protocolo. | `map(any)` | n/a | yes |
 | <a name="input_service_hosts"></a> [service\_hosts](#input\_service\_hosts) | Lista de endereços ou nomes de host atribuídos ao serviço para balanceamento de carga ou exposição. | `list(string)` | n/a | yes |
-| <a name="input_service_launch_type"></a> [service\_launch\_type](#input\_service\_launch\_type) | Tipo de lançamento do serviço no ECS, podendo ser 'FARGATE' ou 'EC2'. | `string` | n/a | yes |
+| <a name="input_service_launch_type"></a> [service\_launch\_type](#input\_service\_launch\_type) | Permite especificar um ou mais capacity providers (FARGATE, FARGATE\_SPOT) e seus pesos. | <pre>list(object({<br>    capacity_provider = string<br>    weight            = number<br>  }))</pre> | n/a | yes |
 | <a name="input_service_memory"></a> [service\_memory](#input\_service\_memory) | Quantidade de memória reservada para o serviço, em megabytes. | `number` | n/a | yes |
 | <a name="input_service_name"></a> [service\_name](#input\_service\_name) | Nome do serviço que será usado dentro do cluster. | `string` | n/a | yes |
 | <a name="input_service_port"></a> [service\_port](#input\_service\_port) | Porta TCP na qual o serviço aceitará tráfego. | `number` | n/a | yes |
