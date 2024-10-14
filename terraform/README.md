@@ -21,7 +21,6 @@ No requirements.
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.69.0 |
-| <a name="provider_null"></a> [null](#provider\_null) | 3.2.3 |
 
 ## Modules
 
@@ -35,7 +34,6 @@ No requirements.
 |------|------|
 | [aws_iam_role.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.ecs_task_execution_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
-| [null_resource.ecr_image_push](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [aws_ssm_parameter.alb](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.listener](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.private_subnet_1](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
@@ -49,6 +47,7 @@ No requirements.
 |------|-------------|------|---------|:--------:|
 | <a name="input_capabilities"></a> [capabilities](#input\_capabilities) | Lista de capacidades especiais necessárias para o serviço, como 'SYS\_ADMIN' para determinados privilégios de sistema. | `list(string)` | n/a | yes |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Nome do cluster ECS que hospedará o serviço. | `string` | n/a | yes |
+| <a name="input_container_image"></a> [container\_image](#input\_container\_image) | Imagem com tag para deployment da aplicação no ECS. | `string` | n/a | yes |
 | <a name="input_environment_variables"></a> [environment\_variables](#input\_environment\_variables) | Lista de variáveis de ambiente que serão passadas às tarefas do serviço. | `list(map(string))` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | Região da AWS onde os recursos serão provisionados. | `string` | n/a | yes |
 | <a name="input_scale_in_adjustment"></a> [scale\_in\_adjustment](#input\_scale\_in\_adjustment) | n/a | `any` | n/a | yes |

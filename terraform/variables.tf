@@ -41,6 +41,11 @@ variable "service_launch_type" {
   description = "Permite especificar um ou mais capacity providers (FARGATE, FARGATE_SPOT) e seus pesos."
 }
 
+variable "container_image" {
+  type        = string
+  description = "Imagem com tag para deployment da aplicação no ECS."
+}
+
 variable "service_task_count" {
   type        = number
   description = "Número de tarefas que o serviço deve manter em execução simultaneamente."
