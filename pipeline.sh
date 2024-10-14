@@ -31,6 +31,9 @@ echo "2-TERRAFORM - CI"
 
 cd ../terraform
 
+echo " ->TERRAFORM INIT"
+terraform init -backend-config=environment/${BRANCH_NAME}/backend.tfvars
+
 echo " ->TERRAFORM - FORMAT CHECK"
 terraform fmt -recursive -check
 
@@ -88,9 +91,6 @@ docker push ${REPOSITORY_TAG}
 cd ../terraform
 
 echo "4-DEPLOY"
-
-echo " ->TERRAFORM INIT"
-terraform init -backend-config=environment/${BRANCH_NAME}/backend.tfvars
 
 echo " ->TERRAFORM PLAN"
 terraform plan -var-file=environment/${BRANCH_NAME}/terraform.tfvars -var container_image=${REPOSITORY_TAG}

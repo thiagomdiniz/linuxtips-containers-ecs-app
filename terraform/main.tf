@@ -1,5 +1,5 @@
 module "service" {
-  source = "/home/thiago/Documents/GitProjects/arq-containers-aws/linuxtips-containers-ecs-service-module"
+  source = "github.com/thiagomdiniz/linuxtips-containers-ecs-service-module?ref=v1"
 
   region                      = var.region
   cluster_name                = var.cluster_name
