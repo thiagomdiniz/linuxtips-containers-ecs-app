@@ -7,7 +7,7 @@
 # INITIAL SETUP
 set -e
 
-export AWS_PROFILE="linuxtips"
+# export AWS_PROFILE="linuxtips"
 export AWS_ACCOUNT="357834747308"
 export AWS_REGION="us-east-1"
 export AWS_PAGER=""

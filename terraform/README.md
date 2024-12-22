@@ -26,7 +26,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_service"></a> [service](#module\_service) | github.com/thiagomdiniz/linuxtips-containers-ecs-service-module | v1.2.0 |
+| <a name="module_service"></a> [service](#module\_service) | github.com/thiagomdiniz/linuxtips-containers-ecs-service-module | v1.3.0 |
 
 ## Resources
 
@@ -47,6 +47,7 @@ No requirements.
 | [aws_ssm_parameter.private_subnet_1](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.private_subnet_2](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.private_subnet_3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.service_discovery_namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.vpc_id](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 
 ## Inputs
@@ -88,6 +89,7 @@ No requirements.
 | <a name="input_ssm_private_subnet_1"></a> [ssm\_private\_subnet\_1](#input\_ssm\_private\_subnet\_1) | ID da primeira subnet privada, armazenado no AWS SSM, onde o serviço será implantado. | `string` | n/a | yes |
 | <a name="input_ssm_private_subnet_2"></a> [ssm\_private\_subnet\_2](#input\_ssm\_private\_subnet\_2) | ID da segunda subnet privada, armazenado no AWS SSM, para implantação do serviço. | `string` | n/a | yes |
 | <a name="input_ssm_private_subnet_3"></a> [ssm\_private\_subnet\_3](#input\_ssm\_private\_subnet\_3) | ID da terceira subnet privada, armazenado no AWS SSM, usada para implantação do serviço. | `string` | n/a | yes |
+| <a name="input_ssm_service_discovery_namespace"></a> [ssm\_service\_discovery\_namespace](#input\_ssm\_service\_discovery\_namespace) | n/a | `any` | n/a | yes |
 | <a name="input_ssm_vpc_id"></a> [ssm\_vpc\_id](#input\_ssm\_vpc\_id) | ID do VPC armazenado no AWS Systems Manager (SSM) onde o serviço será implantado. | `string` | n/a | yes |
 | <a name="input_task_maximum"></a> [task\_maximum](#input\_task\_maximum) | n/a | `any` | n/a | yes |
 | <a name="input_task_minimum"></a> [task\_minimum](#input\_task\_minimum) | n/a | `any` | n/a | yes |
