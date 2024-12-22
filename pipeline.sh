@@ -7,7 +7,7 @@
 # INITIAL SETUP
 set -e
 
-export AWS_PROFILE="linuxtips"
+# export AWS_PROFILE="linuxtips"
 export AWS_ACCOUNT="357834747308"
 export AWS_REGION="us-east-1"
 export AWS_PAGER=""
@@ -31,11 +31,11 @@ echo "2-TERRAFORM - CI"
 
 cd ../terraform
 
-echo " ->TERRAFORM INIT"
-terraform init -backend-config=environment/${BRANCH_NAME}/backend.tfvars
-
 echo " ->TERRAFORM - FORMAT CHECK"
 terraform fmt -recursive -check
+
+echo " ->TERRAFORM INIT"
+terraform init -backend-config=environment/${BRANCH_NAME}/backend.tfvars
 
 echo " ->TERRAFORM - VALIDATE"
 terraform validate
