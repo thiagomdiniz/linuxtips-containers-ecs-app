@@ -1,5 +1,6 @@
 resource "aws_secretsmanager_secret" "test" {
-  name = "${var.service_name}-secret-example"
+  name                    = "${var.service_name}-secret-example"
+  recovery_window_in_days = 0
 }
 
 resource "aws_secretsmanager_secret_version" "test" {
